@@ -24,7 +24,7 @@ const CardComponent = (props) => {
             headStyle={{ width: '200px', height: '200px' }}
             style={{ width: 200, borderRadius: '5px' }}
             bodyStyle={{ padding: '10px' }}
-            cover={<img alt="example" src={image} />}
+            cover={<img alt="example" src={image} style={{width: '200px', height: '200px'}} />}
             onClick={() =>  handleDetailsProduct(id)}
         >
             <img

@@ -16,5 +16,5 @@ export const WrapperProducts = styled.div`
     gap: 12px;
     margin-top:20px;
     flex-wrap: wrap;
-    background-color: #fff;
+    background-color: #efefef;
 `

@@ -119,7 +119,7 @@ const ProductDetailsComponent = ({idProduct}) => {
         <Loading isLoading={isLoading}>
             <Row style={{ padding: '16px', background: '#fff', borderRadius: '4px', height:'auto' }}>
                 <Col span={10} style={{ borderRight: '1px solid #e5e5e5', paddingRight: '8px' }}>
-                    <Image src={productDetails?.image} alt="image prodcut" preview={false} />
+                    <Image src={productDetails?.image} alt="image prodcut" preview={false} style={{width: '500px', height: 'auto' }}/>
                     {/* <Row style={{ paddingTop: '10px', justifyContent: 'space-between' }}>
                         <WrapperStyleColImage span={4} sty>
                             <WrapperStyleImageSmall src={imageProductSmall} alt="image small" preview={false} />
@@ -162,7 +162,7 @@ const ProductDetailsComponent = ({idProduct}) => {
                         
                     </WrapperPriceProduct>
                     <WrapperAddressProduct>
-                        <span>Giao đến </span>
+                        <span>Giao đến: </span>
                         <span className='address'>{user?.address}</span> -
                         <span className='change-address'>.</span>
                     </WrapperAddressProduct>
@@ -173,7 +173,7 @@ const ProductDetailsComponent = ({idProduct}) => {
                             } 
                     />
                     <div style={{ margin: '10px 0 20px', padding: '10px 0', borderTop: '1px solid #e5e5e5', borderBottom: '1px solid #e5e5e5' }}>
-                        <div style={{ marginBottom: '10px' }}>Số lượng</div>
+                        <div style={{ marginBottom: '10px', fontSize: '15px' }}>Số lượng</div>
                         <WrapperQualityProduct>
                             <button style={{ border: 'none', background: 'transparent', cursor: 'pointer' }} onClick={() => handleChangeCount('decrease',numProduct === 1)}>
                                 <MinusOutlined style={{ color: '#000', fontSize: '20px' }} />
@@ -201,7 +201,7 @@ const ProductDetailsComponent = ({idProduct}) => {
                             ></ButtonComponent>
                             {errorLimitOrder && <div style={{color: 'red' , paddingLeft: '5px', paddingTop: '10px', }}>SẢN PHẨM HẾT HÀNG</div>}
                         </div>
-                        <ButtonComponent
+                        {/* <ButtonComponent
                             size={40}
                             styleButton={{
                                 background: '#fff',
@@ -212,9 +212,9 @@ const ProductDetailsComponent = ({idProduct}) => {
                             }}
                             textbutton={'Mua trả sau'}
                             styleTextButton={{ color: 'rgb(13, 92, 182)', fontSize: '15px' }}
-                        ></ButtonComponent>
+                        ></ButtonComponent> */}
                     </div>
-                    <div style={{ padding: '20px 20px 0px 0px'}}>
+                    <div style={{ padding: '20px 20px 0px 0px', fontSize: '15px'}}>
                         {productDetails?.description}
                     </div>
                 </Col>

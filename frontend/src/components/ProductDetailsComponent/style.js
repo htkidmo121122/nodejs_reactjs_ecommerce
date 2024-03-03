@@ -57,6 +57,7 @@ export const WrapperAddressProduct = styled.div`
         line-height: 24px;
         font-weight: 500;
     }
+    font-size: 15px;
 `
 
 export const WrapperQualityProduct = styled.div`
@@ -66,6 +67,7 @@ export const WrapperQualityProduct = styled.div`
     width: 120px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    text-align: center;
 `
 
 export const WrapperInputNumber = styled(InputNumber)`
