@@ -96,7 +96,7 @@ const TypeProductPage = () => {
                             </WrapperProducts>
                             <div style={{ textAlign: 'center', marginTop: '10px' }}>
                             
-                            <Pagination  defaultCurrent={panigate.page + 1} total={panigate?.total + 10  } onChange={onChange}  />
+                            <Pagination  defaultCurrent={panigate.page + 1} total={panigate?.total * 4 } onChange={onChange}  />
                             </div>
                         </Col>
                     </Row>

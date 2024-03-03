@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn } from 'mdb-react-ui-kit';
 import TypeProduct from '../../components/TypeProduct/TypeProduct'
 import { useState } from 'react'
 import { useEffect } from 'react'
@@ -90,6 +90,14 @@ export default function FooterComponent() {
                     )
                 })}
                 </p> */}
+               
+          <p className='d-flex justify-content-center align-items-center'>
+            <span className='me-3'>Register for free</span>
+            <MDBBtn type='button' outline color="black" rounded>
+              Sign up!
+            </MDBBtn>
+          </p>
+      
               
             </MDBCol>
 
