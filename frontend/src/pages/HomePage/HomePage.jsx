@@ -46,7 +46,7 @@ const HomePage = () => {
 
   return (
     <Loading isLoading={isLoading || loading}>
-      <div style={{ width: '1270px', margin: '0 auto' }}>
+      <div style={{ width: '1270px', margin: '0 auto', borderBottom: '2px solid red' }}>
         <WrapperTypeProduct>
           {typeProducts.map((item) => {
             return (
@@ -58,7 +58,7 @@ const HomePage = () => {
       <div className='body' style={{ width: '100%', backgroundColor: '#efefef', paddingBottom: '10px'}}>
         <div id="container" style={{ height: 'auto', width: '1270px', margin: '0 auto' }}>
           <SliderComponent arrImages={[slider1, slider2, slider3]} height={'500px'} />
-          <div style={{ width: '100%', backgroundColor: '#efefef', paddingTop: '20px', fontWeight: 'bold', fontSize: '20px'}}>
+          <div style={{ width: '100%', backgroundColor: '#efefef', paddingTop: '20px', fontWeight: 'bold', fontSize: '20px', borderBottom: '4px solid red'}}>
                 Sản Phẩm Mới Nhất
           </div>
           <WrapperProducts>
@@ -90,6 +90,16 @@ const HomePage = () => {
               styleTextButton={{ fontWeight: 500, color: products?.total === products?.data?.length && '#fff' }}
               onClick={() => setLimit((prev) => prev + 6)}
             />
+          </div>
+          <div style={{ width: '100%', backgroundColor: '#efefef', textAlign: 'center', fontWeight: 'bold', fontSize: '20px', marginTop: '20px', borderBottom: '4px solid red'}}>
+                Đại Lý Phân Phối Chính Hàng APPLE
+          </div>
+          <div className="ratio ratio-21x9" style={{margin : '20px 0px 20px 0px', aspectRatio: "50%"}}>
+            <iframe
+              src="https://www.youtube.com/embed/IY4x85zqoJM?si=YSg_9_fH52QzUh5H"
+              title="YouTube video"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>

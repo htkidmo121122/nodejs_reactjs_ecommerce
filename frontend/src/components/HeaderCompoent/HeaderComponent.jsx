@@ -97,7 +97,7 @@ const HeaderComponent = ({ isHiddenSearch = false, isHiddenCart = false }) => {
             />
           </Col>
         )}
-        <Col span={6} style={{ display: 'flex', gap: '25px', alignItems: 'center' }}>
+        <Col span={6} style={{ display: 'flex', gap: '25px', alignItems: 'center', paddingLeft: '10px' }}>
           <Loading isLoading={loading}>
             <WrapperHeaderAccout>
               {userAvatar ? (
@@ -113,7 +113,7 @@ const HeaderComponent = ({ isHiddenSearch = false, isHiddenCart = false }) => {
               {user?.access_token ? (
                 <>
                   <Popover content={content} trigger="click" open={isOpenPopup}>
-                    <div style={{ cursor: 'pointer',maxWidth: 100, overflow: 'hidden', textOverflow: 'ellipsis', fontWeight: 'bold' , gap: '3px' }} onClick={() => setIsOpenPopup((prev) => !prev)}>{userName?.length ? userName : user?.email}</div>
+                    <div style={{ cursor: 'pointer',maxWidth: 100, overflow: 'hidden', textOverflow: 'ellipsis', fontWeight: 'bold' , gap: '3px', fontSize:'13px' }} onClick={() => setIsOpenPopup((prev) => !prev)}>{userName?.length ? userName : user?.email}</div>
                   </Popover>
                 </>
               ) : (
