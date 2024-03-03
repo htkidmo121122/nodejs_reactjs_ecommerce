@@ -24,7 +24,7 @@ const TypeProductPage = () => {
     const [loading, setLoading] = useState(false)
     const [panigate, setPanigate] = useState({
         page: 0,
-        limit: 20,
+        limit: 10,
         total: 1,
     })
     const fetchProductType = async (type, page, limit) => {
@@ -34,6 +34,7 @@ const TypeProductPage = () => {
             setLoading(false)
             setProducts(res?.data)
             setPanigate({...panigate, total: res?.totalPage})
+            console.log(res?.totalPage, 'totalPage');
         }else {
             setLoading(false)
         }
@@ -49,6 +50,10 @@ const TypeProductPage = () => {
     const onChange = (current, pageSize) => {
         setPanigate({...panigate, page: current - 1, limit: pageSize})    
     }
+    
+    
+    
+   
     return (
         <Loading isLoading={loading}>
             <div style={{ width: '100%', background: '#efefef', height: 'calc(auto - 64px)', paddingBottom: '10px' }}>
@@ -68,6 +73,9 @@ const TypeProductPage = () => {
                                     }else if(pro?.name?.toLowerCase()?.includes(searchDebounce?.toLowerCase())) {
                                         return pro
                                     }
+                                    else {
+                                        return false;
+                                    }
                                 })?.map((product) => {
                                     return (
                                         <CardComponent
@@ -86,7 +94,10 @@ const TypeProductPage = () => {
                                     )
                                 })}
                             </WrapperProducts>
-                            <Pagination defaultCurrent={panigate.page + 1} total={panigate?.total} onChange={onChange} style={{ textAlign: 'center', marginTop: '10px' }} />
+                            <div style={{ textAlign: 'center', marginTop: '10px' }}>
+                            
+                            <Pagination  defaultCurrent={panigate.page + 1} total={panigate?.total + 10  } onChange={onChange}  />
+                            </div>
                         </Col>
                     </Row>
                 </div>
