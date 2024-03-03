@@ -15,6 +15,7 @@ import { useSelector } from 'react-redux';
 import { useQueries } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import Loading from '../../components/LoadingComponent/Loading';
+import FooterComponent from '../../components/FooterComponent/FooterComponent';
 
 const AdminPage = () => {
   const user = useSelector((state) => state?.user)
@@ -96,13 +97,13 @@ const AdminPage = () => {
   return (
     <>    
       <HeaderComponent isHiddenSearch isHiddenCart />
-      <div style={{ display: 'flex',overflowX: 'hidden' , paddingBottom: '10px' }}>
+      <div style={{ display: 'flex',overflowX: 'hidden' , paddingBottom: '0px' }}>
         <Menu
           mode="inline"
           style={{
             width: 256,
             boxShadow: '1px 1px 2px #ccc',
-            height: '100vh',
+            height: '125vh',
             marginTop: '15px',
             gap: '10px'
             
@@ -119,6 +120,7 @@ const AdminPage = () => {
           {renderPage(keySelected)}
         </div>
       </div>
+      <FooterComponent></FooterComponent>
       
     </>
   )

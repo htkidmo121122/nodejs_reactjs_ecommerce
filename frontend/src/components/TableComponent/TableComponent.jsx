@@ -57,6 +57,7 @@ const TableComponent = (props) => {
           type: selectionType,
           ...rowSelection,
         }}
+        style={{paddingRight: '20px'}}
         columns={columns}
         dataSource={dataSource}
         {...props}
