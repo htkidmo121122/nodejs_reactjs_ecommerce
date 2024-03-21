@@ -110,7 +110,7 @@ const SignInPage = () => {
           <Loading isLoading={isLoading}>
             <ButtonComponent
               disabled={!email.length  || !password.length}
-              // onClick={handleSignIn}
+              onClick={handleSignIn}
               size={40}
               styleButton={{
                 background: 'rgb(255, 57, 69)',

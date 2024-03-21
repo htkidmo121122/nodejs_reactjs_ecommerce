@@ -14,6 +14,7 @@ export default function FooterComponent() {
       setTypeProducts(res?.data)
     }
   }
+  const currentDate = new Date();
 
   useEffect(() => {
     fetchAllTypeProduct()
@@ -154,10 +155,8 @@ export default function FooterComponent() {
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2024 Copyright:
-        <a className='text-reset fw-bold' href='http://localhost:3000/'>
-          huflitphone.com
-        </a>
+        © Copyright: 
+      <a className='text-reset fw-bold' href='http://localhost:3000/'> huflitphone.com</a>
       </div>
     </MDBFooter>
   );

@@ -378,7 +378,7 @@ const AdminUser = () => {
             </Form.Item>
 
             <Form.Item
-              label="Adress"
+              label="Address"
               name="address"
               rules={[{ required: true, message: 'Please input your  address!' }]}
             >
