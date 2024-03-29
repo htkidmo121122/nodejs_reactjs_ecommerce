@@ -1,11 +1,5 @@
 import React from 'react'
-import SliderComponent from '../../components/SliderComponent/SliderComponent'
-import TypeProduct from '../../components/TypeProduct/TypeProduct'
-import { WrapperButtonMore, WrapperProducts, WrapperTypeProduct } from './style'
-import slider1 from '../../assets/images/slider1.webp'
-import slider2 from '../../assets/images/slider2.webp'
-import slider3 from '../../assets/images/slider3.webp'
-import CardComponent from '../../components/CardComponent/CardComponent'
+
 import { useQuery } from '@tanstack/react-query'
 import * as ProductService from '../../services/ProductService'
 import { useSelector } from 'react-redux'
@@ -13,6 +7,7 @@ import { useState } from 'react'
 import Loading from '../../components/LoadingComponent/Loading'
 import { useDebounce } from '../../hooks/useDebounce'
 import { useEffect } from 'react'
+import HomePagePresentation from './ContainerPresentational/HomePagePresentational'
 
 const HomePage = () => {
   const searchProduct = useSelector((state) => state?.product?.search)
@@ -44,9 +39,14 @@ const HomePage = () => {
     fetchAllTypeProduct()
   }, [])
 
+  const handleSetLimit = () => {
+    setLimit((prev) => prev + 6);
+  };
+
+
   return (
     <Loading isLoading={isLoading || loading}>
-      <div style={{ width: '1270px', margin: '0 auto', borderBottom: '2px solid red' }}>
+      {/* <div style={{ width: '1270px', margin: '0 auto', borderBottom: '2px solid red' }}>
         <WrapperTypeProduct>
           {typeProducts.map((item) => {
             return (
@@ -102,9 +102,17 @@ const HomePage = () => {
             ></iframe>
           </div>
         </div>
-      </div>
+      </div> */}
+      <HomePagePresentation
+        typeProducts={typeProducts}
+        products={products}
+        isPreviousData={isPreviousData}
+        isLoading={isLoading}
+        loading={loading}
+        onSetLimit={handleSetLimit}
+      />
     </Loading>
   )
 }
 
-export default HomePage 
+export default HomePage
