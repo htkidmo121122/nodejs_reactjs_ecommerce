@@ -13,7 +13,12 @@ import Loading from '../../components/LoadingComponent/Loading'
 import jwt_decode from "jwt-decode";
 import { useDispatch, useSelector } from 'react-redux'
 import { updateUser } from '../../redux/slides/userSlide'
+import LoginbyGGComponent from '../../components/LoginbyGGComponent/LoginbyGGComponent'
+import {gapi} from 'gapi-script'
 
+
+const clientId = "158574255446-ju6egnqnfua7h7fpo8lqg9d6ekssqok6.apps.googleusercontent.com";
+  
 const SignInPage = () => {
   const [isShowPassword, setIsShowPassword] = useState(false)
   const location = useLocation()
@@ -74,6 +79,26 @@ const SignInPage = () => {
       password
     })
   }
+  const handleForgotPassword = () => {
+    // Hiển thị biểu mẫu quên mật khẩu khi người dùng nhấp vào nút "Quên mật khẩu"
+    setShowForgotPasswordForm(true);
+  }
+
+  //google access
+  useEffect( () => {
+    function start() {
+      gapi.client.init({
+        client_id: clientId,
+     
+      
+        scope: ""
+      });
+    }
+    gapi.load('client:auth2', start);
+  }
+
+  );
+
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0, 0, 0, 0.53)', height: '100vh' }}>
@@ -125,6 +150,7 @@ const SignInPage = () => {
             ></ButtonComponent>
           </Loading>
           {/* <p><WrapperTextLight>Quên mật khẩu?</WrapperTextLight></p> */}
+          <LoginbyGGComponent/>
           <p>Chưa có tài khoản? <WrapperTextLight onClick={handleNavigateSignUp}> Tạo tài khoản</WrapperTextLight></p>
         </WrapperContainerLeft>
         <WrapperContainerRight>
