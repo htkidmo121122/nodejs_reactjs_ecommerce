@@ -46,12 +46,7 @@ const HomePage = () => {
 
   return (
     <Loading isLoading={isLoading || loading}>
-<<<<<<< HEAD
       {/* <div style={{ width: '1270px', margin: '0 auto', borderBottom: '2px solid red' }}>
-=======
-  
-      <div style={{ width: '1270px', margin: '0 auto', borderBottom: '2px solid red'  }}>
->>>>>>> 06c589bd4062e3a6cf748457d1a4ef0b58940ad0
         <WrapperTypeProduct>
           {typeProducts.map((item) => {
             return (
@@ -60,10 +55,10 @@ const HomePage = () => {
           })}
         </WrapperTypeProduct>
       </div>
-      <div className='body' style={{ width: '100%', paddingBottom: '10px'}}>
+      <div className='body' style={{ width: '100%', backgroundColor: '#efefef', paddingBottom: '10px'}}>
         <div id="container" style={{ height: 'auto', width: '1270px', margin: '0 auto' }}>
           <SliderComponent arrImages={[slider1, slider2, slider3]} height={'500px'} />
-          <div style={{ width: '100%', paddingTop: '20px', fontWeight: 'bold', fontSize: '20px', borderBottom: '4px solid red'}}>
+          <div style={{ width: '100%', backgroundColor: '#efefef', paddingTop: '20px', fontWeight: 'bold', fontSize: '20px', borderBottom: '4px solid red'}}>
                 Sản Phẩm Mới Nhất
           </div>
           <WrapperProducts>
@@ -96,7 +91,7 @@ const HomePage = () => {
               onClick={() => setLimit((prev) => prev + 6)}
             />
           </div>
-          <div style={{ width: '100%', textAlign: 'center', fontWeight: 'bold', fontSize: '20px', marginTop: '20px', borderBottom: '4px solid red'}}>
+          <div style={{ width: '100%', backgroundColor: '#efefef', textAlign: 'center', fontWeight: 'bold', fontSize: '20px', marginTop: '20px', borderBottom: '4px solid red'}}>
                 Đại Lý Phân Phối Chính Hàng APPLE
           </div>
           <div className="ratio ratio-21x9" style={{margin : '20px 0px 20px 0px', aspectRatio: "50%"}}>
@@ -107,7 +102,6 @@ const HomePage = () => {
             ></iframe>
           </div>
         </div>
-<<<<<<< HEAD
       </div> */}
       <HomePagePresentation
         typeProducts={typeProducts}
@@ -117,11 +111,6 @@ const HomePage = () => {
         loading={loading}
         onSetLimit={handleSetLimit}
       />
-=======
-      </div>
- 
-      
->>>>>>> 06c589bd4062e3a6cf748457d1a4ef0b58940ad0
     </Loading>
   )
 }
