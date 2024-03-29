@@ -17,6 +17,7 @@ import { useEffect } from 'react';
 import { searchProduct } from '../../redux/slides/productSlide';
 
 
+
 const HeaderComponent = ({ isHiddenSearch = false, isHiddenCart = false }) => {
   const navigate = useNavigate()
   const user = useSelector((state) => state.user)
@@ -82,6 +83,7 @@ const HeaderComponent = ({ isHiddenSearch = false, isHiddenCart = false }) => {
   return (
     <div style={{  heiht: '100%', width: '100%', display: 'flex',background: '#fd5555', justifyContent: 'center' }}>
       <WrapperHeader style={{ justifyContent: isHiddenSearch && isHiddenSearch ? 'space-between' : 'unset' }}>
+     
         <Col span={5}>
           <WrapperTextHeader to='/'>HUFIT PHONE</WrapperTextHeader>
         </Col>
@@ -137,6 +139,7 @@ const HeaderComponent = ({ isHiddenSearch = false, isHiddenCart = false }) => {
           )}
         </Col>
       </WrapperHeader>
+
     </div>
   )
 }
